@@ -22,7 +22,7 @@ Next step is to make an API Request which will authenticate the Request and then
 # Step Three
 after the authentication token has been generated we will then use the Token to perform an API request And the result of the request will be stored aS JSON DATA which will be used for further calculation
 
-# Step Four
+# Step Four - Research Workflow
 according to the preselected trading strategy and ticker symbol, we will then perform various calculation and analysis based on the results obtained from the JSON data and outsput out a table which would be used to determine which stock provides a better strategy over another
 
 # Step Five
@@ -106,5 +106,41 @@ Documentation on how to use Drupal::httpClient can be located at https://drupali
 Guzzle gitub at https://github.com/guzzle/guzzle
 Guzzle Documentation is at http://docs.guzzlephp.org/en/latest/
 
+# Research workflow for step 4 above
 
+Covered call Strategy Research blueprint
+```
+var symbol = "AAPL"; 
+
+
+sTEP 1 ,  Get daysToExpiration between 30 and 37
+
+=> get option week "description" with "daysToExpiration" >= 30 && <= 37
+
+GET /v1/marketdata/chains?apikey=charttgweb002&symbol=AAPL&contractType=CALL HTTP/1.1
+
+curl -X GET --header "Authorization: " "https://api.tdameritrade.com/v1/marketdata/chains?apikey=charttgweb002&symbol=AAPL&contractType=CALL"
+
+
+STEP 2 . get the stock price 
+Get current Stock price from "underlyingPrice" = var stockPrice
+
+Step 3 . get teh week of the month from "description"
+Get month form "description" from "AAPL Nov 22 2019 150 Call (Weekly)"= "Nov 22 2019" = var Month
+
+
+Step 4. get the date to expiration
+Get "daysToExpiration" = var DTE
+
+
+Step 5. Call to sell
+find  "delta" closest to .400   = var delta
+GET call price from "strikePrice" = var strike
+
+
+step 6  Get the mark
+get "mark" = var mark
+
+result array ( mark , strike , delta , DTE , Month , stockPrice )
+```
 
