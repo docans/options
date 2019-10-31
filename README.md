@@ -100,6 +100,11 @@ request({
   });
   ```
 
+# Module Setup with HTTP client
+In order to write this module we will need to use the Drupal::httpClient. 
+Documentation on how to use Drupal::httpClient can be located at https://drupalize.me/blog/201512/speak-http-drupal-httpclient
+Guzzle gitub at https://github.com/guzzle/guzzle
+Guzzle Documentation is at http://docs.guzzlephp.org/en/latest/
 
 
 
