@@ -33,8 +33,16 @@ TD Ameritrade does not have a detailed documentation on how to get the process d
 
 We will therefore use the Limited documentation provided below And combine it with sample code from another API which is tradier
 
+# DRUPAL MODULES
+https://www.drupal.org/project/simple_oauth
+
 # TD AMERITRATDE Setup
 Connecting to the TD ameritrade API - https://developer.tdameritrade.com/content/getting-started
+
+# video REference
+https://www.youtube.com/watch?v=qJ94sSyPGBw&list=PLcFcktZ0wnNkj7nyfZrh7t6TZs8-JnF3n
+
+https://www.youtube.com/watch?v=mLjtVVqp5iw&t=1s
 
 # Authentication
 Simple Auth for Local Apps - https://developer.tdameritrade.com/content/simple-auth-local-apps
